@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+        <link rel="stylesheet" href="{{url_for('static', filename='stylesheet.css')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="author" content="AWell">
+        <title> {% block title %}Home page{% endblock %}</title>
+
+    
+    {% endblock %}
+    </head>
+    <body>
+        
+        <nav id ="siteNav">
+                <a href = "#">Login page</a>
+        </nav>
+
+        <h1 class="title">{% block header %} {% endblock %}</h1>
+        <div>{% block article %}{% endblock %}</div>
+        <footer>This page was created by <a href = "https://github.com/AWell35">@AWell35</a></footer>
+    </body>
